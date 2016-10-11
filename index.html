@@ -1,17 +1,53 @@
 <!DOCTYPE html>
-
 <html>
+<head>
+<style>
+#pyramid {
+  line-height: 0;
+  font-size: 30px;
+}
 
-  <head>
+body {
+  font-family: "Courier New", monospace;
+  text-align: center;
+}
 
-      <title>Pyramid Slider</title>
+.invalid-field {
+  border: 1px solid red;
+}
 
-  </head>
+.error-message {
+  color: red;
+}
+</style>
+</head>
+<body>
+  <h1>Pyramid Slide!</h1>
 
-  <body>
+  <!--<p>When you say</p>-->
+  <!--<p><strong>Draw a pyramid</strong></p>-->
+  <!--<p>I say:</p>-->
+  <br>
 
-      <h1>Joy Nelson</h1>
+    <label>
+      How high?
+    </label>
+      <!-- input type="text" id="height"/>-->
+      <form oninput="n.value=parseInt(points.value)"><!--this is to create output tag-->
+        <input type="range" id="points" min="1" value="1" max="20" oninput="drawPyramid(this.value)" />
+        <output name="n" for="points">1</output><!--this is to create output tag-->
+        <!--<label class="error-message">-->
+        <!-- If there was a user error, we will put a message in here -->
+      <br><br>
 
+      <!--<input type="submit" value="Draw a pyramid"/>-->
+      <!-- <input type="range" oninput="drawPyramid(height)"-->
+    </form>
+
+    <br><br>
+
+    <div id="pyramid"></div>
+
+    <script src="pyramid.js"></script>
   </body>
-
   </html>
